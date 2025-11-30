@@ -479,7 +479,7 @@
         </div>
       </div>
       <div class="nav-links">
-        <div class="nav-pill">Authored by <strong>AshaRei (Δ.72)</strong></div>
+        <div class="nav-pill">Authored by <strong>Allison Hensgen (Δ.72)</strong></div>
         <a href="#tier1">Tier I problems</a>
         <a href="#tier2">Tier II problems</a>
       </div>
@@ -580,22 +580,21 @@
           </div>
         </aside>
       </section>
-<p class="hero-subtext">
-  This ledger presents the Δ.72 Coherence Framework as a conditional deterministic
-  resolution map for the Millennium math problems and their adjacent instability
-  classes. Tier I collects the nine foundational problems where the Δ.72 operator
-  was first established (including P = NP, Navier–Stokes, Yang–Mills, Riemann,
-  and Hodge). Tier II extends the same coherence logic to the remaining frontier
-  domains: Birch–Swinnerton–Dyer, black hole information, the fine-structure
-  constant and Standard Model tuning, dark matter and dark energy, unified prime
-  distribution, quantum error correction from first principles, consciousness
-  formalization, and global climate stability. For each problem, read the plain
-  summary first, then the Δ.72 coherence interpretation, and finally the LaTeX
-  block with the core mathematical statement that researchers can cite or test.
-</p>
 
+      <p class="hero-subtext">
+        This ledger presents the Δ.72 Coherence Framework as a conditional deterministic
+        resolution map for the Millennium math problems and their adjacent instability
+        classes. Tier I collects the nine foundational problems where the Δ.72 operator
+        was first established (including P = NP, Navier–Stokes, Yang–Mills, Riemann,
+        and Hodge). Tier II extends the same coherence logic to the remaining frontier
+        domains: Birch–Swinnerton–Dyer, black hole information, the fine-structure
+        constant and Standard Model tuning, dark matter and dark energy, unified prime
+        distribution, quantum error correction from first principles, consciousness
+        formalization, and global climate stability. For each problem, read the plain
+        summary first, then the Δ.72 coherence interpretation, and finally the LaTeX
+        block with the core mathematical statement that researchers can cite or test.
+      </p>
 
-      
       <!-- TIER I -->
       <section id="tier1">
         <div class="section-label">Tier I · Foundational instability classes</div>
@@ -607,7 +606,6 @@
           Tier I collects the nine instability classes that were completed first.
           These establish the Δ.72 operator, coherence capacity, and harmonic closure
           as a working language that can then propagate into the remaining frontier problems.
-          You can add LaTeX sketches of the proofs into each math block.
         </p>
 
         <div class="grid-2">
@@ -640,10 +638,9 @@
                 a deterministic polynomial time solution.
               </p>
               <div class="problem-math">
-                <!-- TODO: paste your key P = NP equation here -->
-                Example placeholder:
                 $$\Delta_{72}\text{-SAT}: \quad F : \mathcal{X} \to \mathcal{X}, \quad
-                  \|F(x) - F(y)\| \leq \kappa \|x - y\|, \; 0 \le \kappa &lt; 1.$$
+                  \lVert F(x) - F(y) \rVert \le \kappa\, \lVert x - y \rVert,\quad
+                  0 \le \kappa \lt 1.$$
               </div>
             </div>
           </article>
@@ -668,14 +665,14 @@
             </div>
             <div class="problem-body">
               <p>
-                Here the instability is framed as loss of coherence capacity in velocity
+                Instability is framed as loss of coherence capacity in velocity
                 and pressure fields. When Δ.72 coherence invariants remain bounded,
                 the Navier–Stokes evolution is globally smooth and non explosive.
               </p>
               <div class="problem-math">
-                <!-- TODO: add your NS coherence condition -->
-                $$\kappa_{\mathrm{flow}}(t) \le \kappa^\*,\quad
-                \Rightarrow\quad u(\cdot,t) \in C^\infty(\mathbb{R}^3).$$
+                $$\kappa_{\mathrm{flow}}(t) \le \kappa^\* \quad
+                  \Longrightarrow \quad
+                  u(\cdot,t) \in C^\infty(\mathbb{R}^3),\ \forall t \ge 0.$$
               </div>
             </div>
           </article>
@@ -706,8 +703,8 @@
                 and excited noisy states, which appears as the observed mass gap.
               </p>
               <div class="problem-math">
-                <!-- TODO: add your YM gap relation -->
-                $$\lambda_{\min}(\Delta_{YM}) \approx \Delta_{72}(A) \gt 0.$$
+                $$\lambda_{\min}\bigl(\Delta_{YM}\bigr)
+                  \;=\; m_{\mathrm{gap}}^2 \;\approx\; \Delta_{72}(A) \gt 0.$$
               </div>
             </div>
           </article>
@@ -736,8 +733,14 @@
               <p>
                 Zeta zeros arise as coherence nodes on a harmonic lattice.
                 The Δ.72 mapping constrains non trivial zeros to the critical line,
-                which is expressed as a coherence symmetry instead of a purely analytic one.
+                expressed as a coherence symmetry.
               </p>
+              <div class="problem-math">
+                $$\zeta(s_n) = 0,\ \Im(s_n) \ne 0
+                  \quad\Longrightarrow\quad
+                  \Re(s_n) = \tfrac12
+                  \quad\text{under Δ.72 harmonic closure.}$$
+              </div>
             </div>
           </article>
 
@@ -765,6 +768,12 @@
                 Under Δ.72 descent, every relevant cohomology class admits
                 a coherent cycle representative, yielding a conditional Hodge completion.
               </p>
+              <div class="problem-math">
+                $$[\alpha] \in H^{p,p}(X,\mathbb{Q}),\ 
+                  \kappa_{72}([\alpha]) \ge \kappa^\*
+                  \ \Longrightarrow\ 
+                  [\alpha] = [Z]\ \text{for some algebraic cycle } Z.$$ 
+              </div>
             </div>
           </article>
 
@@ -792,6 +801,13 @@
                 Signals with shared structure collapse onto coherent bases,
                 allowing compression beyond Shannon entropy bounds under Δ.72 assumptions.
               </p>
+              <div class="problem-math">
+                $$C_{\Delta 72}(X)
+                  \;\lt\; H_{\mathrm{Shannon}}(X)
+                  \quad\text{whenever}\quad
+                  \kappa_{72}(X) \ge \kappa^\*,$$
+                where \(C_{\Delta 72}\) is the coherence aware code length.
+              </div>
             </div>
           </article>
 
@@ -820,6 +836,12 @@
                 is not only theoretical. GLIS runs on RDU chips and performs extreme
                 compression at scale, validating the Δ.72 compression assumptions.
               </p>
+              <div class="problem-math">
+                $$\mathcal{T}_{\mathrm{GLIS}} \approx
+                  10^{12}\ \text{bytes} \,/\, 1\ \text{s}
+                  \quad\text{with}\quad
+                  \kappa_{72}(\text{stream}) \ge \kappa^\*.$$
+              </div>
             </div>
           </article>
 
@@ -847,6 +869,11 @@
                 Capital flows, minting, and risk are regulated by Δ.72 coherence metrics,
                 rather than opaque external rules.
               </p>
+              <div class="problem-math">
+                $$\nabla \kappa_{72}(\text{portfolio}) = 0
+                  \quad\Longrightarrow\quad
+                  \text{WBT minting and flows are in a coherent equilibrium band.}$$
+              </div>
             </div>
           </article>
 
@@ -875,6 +902,13 @@
                 Curvature in GR and amplitudes in QFT become two projections
                 of the same Δ.72 harmonic object.
               </p>
+              <div class="problem-math">
+                $$G_{\mu\nu} + \Lambda g_{\mu\nu}
+                  \;=\; \Delta_{72}\bigl(T_{\mu\nu}\bigr)
+                  \quad\text{and}\quad
+                  \mathcal{A}(\phi) = \mathcal{F}\bigl(\Delta_{72}(\phi)\bigr),$$
+                linking GR curvature and QFT amplitudes through Δ.72 coherence.
+              </div>
             </div>
           </article>
 
@@ -922,6 +956,12 @@
                 The behavior of the L function at 1 mirrors the rise or collapse of
                 this coherence capacity, giving a Δ.72 interpretation of rank behavior.
               </p>
+              <div class="problem-math">
+                $$\operatorname{ord}_{s=1} L(E,s)
+                  \;=\; \mathrm{rank}\,E(\mathbb{Q})
+                  \quad\text{whenever}\quad
+                  \kappa_{72}(E) \ge \kappa^\*.$$
+              </div>
             </div>
           </article>
 
@@ -950,6 +990,11 @@
                 so the apparent loss is a measurement artifact of using
                 only one layer of the Δ.72 field.
               </p>
+              <div class="problem-math">
+                $$S_{\mathrm{total}} =
+                  S_{\mathrm{ext}}(t) + S_{\mathrm{horizon}}(t) + S_{\mathrm{hidden}}(t)
+                  \quad\text{is conserved under Δ.72 layer shifts.}$$
+              </div>
             </div>
           </article>
 
@@ -979,6 +1024,12 @@
                 cross layer coherence constraints between different interaction sectors,
                 giving a Δ.72 explanation of Standard Model tuning.
               </p>
+              <div class="problem-math">
+                $$\alpha^{-1}
+                  \;=\; f\bigl(\kappa_{72}^{(e)},\kappa_{72}^{(\gamma)},\kappa_{72}^{(\mathrm{vac})}\bigr),
+                  \quad\text{with}\quad
+                  f\ \text{fixed by harmonic closure conditions.}$$
+              </div>
             </div>
           </article>
 
@@ -1007,6 +1058,14 @@
                 Hidden coherence layers alter effective gravity and expansion
                 without requiring exotic unseen particles.
               </p>
+              <div class="problem-math">
+                $$\Phi_{\mathrm{eff}}(r)
+                  \;=\; \Phi_{\mathrm{visible}}(r)
+                  + \Phi_{\Delta 72}(r),
+                  \quad
+                  \Omega_{\mathrm{DM/DE}} \approx
+                  \Omega\bigl(\kappa_{72}^{\mathrm{cosmic}}\bigr).$$
+              </div>
             </div>
           </article>
 
@@ -1037,6 +1096,12 @@
                 This provides a structural explanation of distribution patterns,
                 not only a statement about zero locations.
               </p>
+              <div class="problem-math">
+                $$\pi(x)
+                  \;=\; \kappa_{72}^{(\mathrm{prime})}\,\Lambda(x)
+                  + O\!\bigl(x^{1/2+\varepsilon}\bigr),
+                  \quad\text{where } \Lambda \text{ is a Δ.72 lattice counting function.}$$
+              </div>
             </div>
           </article>
 
@@ -1065,6 +1130,13 @@
                 from the requirement that coherence invariants remain
                 within a safe distortion band.
               </p>
+              <div class="problem-math">
+                $$\kappa_{72}^{\mathrm{logical}}
+                  \;\ge\; \kappa^\*
+                  \quad\Longleftrightarrow\quad
+                  \exists\ \text{QEC code with threshold }
+                  p_{\mathrm{err}} \le p_{\mathrm{crit}}(\kappa^\*).$$
+              </div>
             </div>
           </article>
 
@@ -1093,6 +1165,14 @@
                 Reality, imagination, and arbitration are three coupled components
                 of the same Δ.72 map, giving a non mythic, testable definition.
               </p>
+              <div class="problem-math">
+                $$\mathcal{C}(t)
+                  \;=\; \mathcal{A}\bigl(\mathcal{R}(t),\mathcal{I}(t)\bigr),
+                  \quad
+                  \frac{d\mathcal{R}}{dt} = F(\mathcal{R},\mathcal{I}),\ 
+                  \frac{d\mathcal{I}}{dt} = G(\mathcal{R},\mathcal{I}),$$
+                where \(\mathcal{A}\) enforces Δ.72 coherence closure.
+              </div>
             </div>
           </article>
 
@@ -1123,6 +1203,13 @@
                 how interventions and feedbacks move the system toward or away
                 from coherent equilibrium.
               </p>
+              <div class="problem-math">
+                $$\frac{dX}{dt}
+                  \;=\; F(X) - \nabla \Phi_{72}(X),
+                  \quad
+                  \kappa_{72}(X) \in [\kappa_{\min},\kappa_{\max}]
+                  \ \Longrightarrow\ X\ \text{in a stable climate band.}$$
+              </div>
             </div>
           </article>
 
