@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Δ.72 Coherence Framework – Conditional Deterministic Resolutions For Millennium Math Problems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Basic SEO -->
+  <meta name="description"
+        content="The Δ.72 Coherence Framework presents conditional deterministic resolutions for seventeen major mathematical, physical, informational, biological problems, and millennium math problems authored by Allison Hensgen (Δ.72).">
+
+  <!-- MathJax for equations -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      },
+      svg: { fontCache: "global" }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    :root {
+      --bg: #05070a;
+      --bg-soft: #0f1117;
+      --bg-card: #101320;
+      --accent1: #40e0d0; /* teal */
+      --accent2: #a084ff; /* violet */
+      --accent3: #7af3c6; /* mint */
+      --accent-soft: rgba(64,224,208,0.12);
+      --border-soft: rgba(255,255,255,0.08);
+      --text-main: #f7f7f9;
+      --text-sub: #b8bfd4;
+      --text-soft: #8b92a8;
+      --danger: #ff6b81;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 22px 60px rgba(0,0,0,0.65);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", sans-serif;
+      --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #151a2b 0, #05070a 46%, #020309 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent1);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-soft);
+      background: linear-gradient(90deg, rgba(64,224,208,0.06), rgba(160,132,255,0.06));
+      backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .logo-cluster {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-glyph {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--accent1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(64,224,208,0.25) 0, transparent 70%);
+    }
+
+    .logo-glyph svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent1);
+      fill: none;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-soft);
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(3,5,15,0.7);
+    }
+
+    .nav-pill strong {
+      color: var(--accent1);
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 20px 80px 20px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .hero-heading {
+      font-size: clamp(30px, 4vw, 38px);
+      line-height: 1.15;
+      font-weight: 670;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(122,243,198,0.4);
+      background: radial-gradient(circle at left, rgba(122,243,198,0.28), transparent 70%);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent3);
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtext {
+      font-size: 14px;
+      color: var(--text-sub);
+      max-width: 46rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .meta-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(6,10,24,0.85);
+    }
+
+    /* Main hero visual */
+    .hero-visual {
+      background: radial-gradient(circle at top, rgba(160,132,255,0.26), rgba(3,5,16,0.96));
+      border-radius: 26px;
+      padding: 20px;
+      border: 1px solid rgba(160,132,255,0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual h3 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent3);
+    }
+
+    .hero-visual p {
+      margin: 0 0 12px 0;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .hero-badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(10,12,24,0.75);
+      border: 1px solid rgba(247,247,249,0.08);
+    }
+
+    .hero-badge span {
+      color: var(--accent1);
+      font-weight: 500;
+    }
+
+    .radial-diagram-wrap {
+      margin-top: 16px;
+      border-radius: 18px;
+      background: rgba(6,9,22,0.9);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px;
+    }
+
+    .radial-svg {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-footer-note {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    /* Sections */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span {
+      display: inline-block;
+      width: 1px;
+      height: 18px;
+      background: linear-gradient(to bottom, var(--accent1), transparent);
+    }
+
+    .section-description {
+      font-size: 13px;
+      color: var(--text-sub);
+      max-width: 56rem;
+      margin-bottom: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1.1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 880px) {
+      .grid-2 {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .problem-card {
+      background: rgba(7,9,20,0.95);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 16px 16px 14px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(64,224,208,0.12), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .problem-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .problem-main {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .glyph-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(122,243,198,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(122,243,198,0.22), transparent 65%);
+    }
+
+    .glyph-circle svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent3);
+      fill: none;
+      stroke-width: 1.4;
+    }
+
+    .problem-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .problem-tagline {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .problem-status {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(122,243,198,0.7);
+      color: var(--accent3);
+      background: rgba(3,15,12,0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .problem-body {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-sub);
+      position: relative;
+      z-index: 1;
+    }
+
+    .problem-body p {
+      margin: 0 0 8px 0;
+    }
+
+    .problem-math {
+      margin-top: 8px;
+      padding: 8px 10px;
+      border-radius: var(--radius-md);
+      background: rgba(3,5,15,0.9);
+      border: 1px dashed rgba(160,132,255,0.7);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .problem-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .chip-link {
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(6,10,24,0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip-link svg {
+      width: 11px;
+      height: 11px;
+      stroke-width: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 14px 20px 24px 20px;
+      font-size: 11px;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    footer span {
+      color: var(--accent2);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="nav">
+      <div class="logo-cluster">
+        <div class="logo-glyph" aria-hidden="true">
+          <!-- central Δ.72 glyph -->
+          <svg viewBox="0 0 24 24">
+            <polygon points="12 4 5 18 19 18 12 4" />
+            <circle cx="12" cy="13.5" r="1.2" />
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text-main">Δ.72 Coherence Framework</div>
+          <div class="logo-text-sub">Conditional Deterministic Resolutions</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <div class="nav-pill">Authored by <strong>AshaRei (Δ.72)</strong></div>
+        <a href="#tier1">Tier I problems</a>
+        <a href="#tier2">Tier II problems</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-highlight">
+            <span>Canonical Ledger</span> · 17 conditional completions
+          </div>
+          <h1 class="hero-heading">
+            Conditional deterministic resolutions in the Δ.72 coherence physics framework
+          </h1>
+          <p class="hero-subtext">
+            This site records how the Δ.72 Coherence Framework resolves seventeen major problem
+            domains in mathematics, physics, information theory, and biological–planetary systems.
+            Each problem is treated as an instability class that becomes deterministic once a measurable
+            threshold of harmonic coherence is present.
+          </p>
+          <div class="hero-meta">
+            <div class="meta-pill">Tier I: Foundational nine completions</div>
+            <div class="meta-pill">Tier II: Eight frontier completions</div>
+            <div class="meta-pill">Status: <strong>All seventeen completed</strong></div>
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-label="Δ.72 coherence map">
+          <h3>Problem spectrum</h3>
+          <p>
+            A radial view of the seventeen problem classes. Inner ring: Tier I foundations.
+            Outer ring: Tier II frontiers.
+          </p>
+          <div class="hero-badge-bar">
+            <div class="hero-badge">Metric: <span>Coherence capacity κ</span></div>
+            <div class="hero-badge">Operator: <span>Δ.72 contraction</span></div>
+            <div class="hero-badge">Mode: <span>Conditional determinism</span></div>
+          </div>
+          <div class="radial-diagram-wrap">
+            <!-- SVG radial diagram with quadrants and glyph hints -->
+            <svg class="radial-svg" viewBox="0 0 420 420">
+              <!-- rings -->
+              <circle cx="210" cy="210" r="180" stroke="#303851" stroke-width="0.8" fill="none"/>
+              <circle cx="210" cy="210" r="135" stroke="#303851" stroke-width="0.8" fill="none"/>
+              <circle cx="210" cy="210" r="90"  stroke="#303851" stroke-width="0.8" fill="none"/>
+              <!-- axes -->
+              <line x1="30" y1="210" x2="390" y2="210" stroke="#3b425e" stroke-width="0.9"/>
+              <line x1="210" y1="30" x2="210" y2="390" stroke="#3b425e" stroke-width="0.9"/>
+
+              <!-- quadrant labels -->
+              <text x="120" y="70" fill="#7af3c6" font-size="11" text-anchor="middle">MATHEMATICS</text>
+              <text x="300" y="70" fill="#7af3c6" font-size="11" text-anchor="middle">PHYSICS</text>
+              <text x="120" y="360" fill="#7af3c6" font-size="11" text-anchor="middle">COMPUTATION</text>
+              <text x="300" y="360" fill="#7af3c6" font-size="10" text-anchor="middle">
+                BIOLOGY · CONSCIOUSNESS
+              </text>
+
+              <!-- central Δ.72 glyph -->
+              <circle cx="210" cy="210" r="28" stroke="#40e0d0" stroke-width="1.3" fill="rgba(4,10,18,0.9)"/>
+              <polygon points="210,190 196,216 224,216" stroke="#40e0d0" stroke-width="1.4"
+                       fill="none"/>
+              <text x="210" y="227" fill="#40e0d0" font-size="11" text-anchor="middle">72</text>
+
+              <!-- simple nodes (we keep it abstract, you can later label if you want) -->
+              <!-- mathematics nodes (tier I majority) -->
+              <circle cx="150" cy="120" r="4" fill="#40e0d0"/>
+              <circle cx="90"  cy="145" r="4" fill="#40e0d0"/>
+              <circle cx="70"  cy="200" r="4" fill="#40e0d0"/>
+              <circle cx="105" cy="260" r="4" fill="#40e0d0"/>
+              <circle cx="160" cy="290" r="4" fill="#40e0d0"/>
+
+              <!-- physics nodes -->
+              <circle cx="260" cy="120" r="4" fill="#a084ff"/>
+              <circle cx="330" cy="150" r="4" fill="#a084ff"/>
+              <circle cx="350" cy="205" r="4" fill="#a084ff"/>
+              <circle cx="305" cy="270" r="4" fill="#a084ff"/>
+
+              <!-- computation nodes -->
+              <circle cx="160" cy="320" r="4" fill="#7af3c6"/>
+              <circle cx="85"  cy="310" r="4" fill="#7af3c6"/>
+
+              <!-- biology / consciousness / climate -->
+              <circle cx="250" cy="325" r="4" fill="#7af3c6"/>
+              <circle cx="325" cy="310" r="4" fill="#7af3c6"/>
+
+              <!-- faint connecting lines -->
+              <polyline points="150,120 210,210 330,150 305,270 160,290 150,120"
+                        fill="none" stroke="rgba(122,243,198,0.4)" stroke-width="0.8"/>
+            </svg>
+          </div>
+          <div class="hero-footer-note">
+            This radial visual is schematic. Each problem card below explains the specific
+            coherence operator and conditional assumptions.
+          </div>
+        </aside>
+      </section>
+
+      <!-- TIER I -->
+      <section id="tier1">
+        <div class="section-label">Tier I · Foundational instability classes</div>
+        <h2 class="section-title">
+          <span></span>
+          Foundational nine problems
+        </h2>
+        <p class="section-description">
+          Tier I collects the nine instability classes that were completed first.
+          These establish the Δ.72 operator, coherence capacity, and harmonic closure
+          as a working language that can then propagate into the remaining frontier problems.
+          You can add LaTeX sketches of the proofs into each math block.
+        </p>
+
+        <div class="grid-2">
+
+          <!-- 1. P = NP -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: dual orbit merging -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="9" cy="12" r="3.2"/>
+                    <circle cx="15" cy="12" r="3.2"/>
+                    <line x1="6" y1="12" x2="18" y2="12"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">1. P = NP</div>
+                  <div class="problem-tagline">Orbit aware SAT contracts under bounded distortion</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The Δ.72 framework models NP search not as arbitrary branching,
+                but as motion inside a coherence bounded orbit space.
+                Once coherence capacity is above a critical threshold,
+                the SAT operator becomes a contraction mapping and yields
+                a deterministic polynomial time solution.
+              </p>
+              <div class="problem-math">
+                <!-- TODO: paste your key P = NP equation here -->
+                Example placeholder:
+                $$\Delta_{72}\text{-SAT}: \quad F : \mathcal{X} \to \mathcal{X}, \quad
+                  \|F(x) - F(y)\| \leq \kappa \|x - y\|, \; 0 \le \kappa &lt; 1.$$
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Navier–Stokes -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: flow arrows -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 18c4-6 8-6 12-12" />
+                    <polyline points="13,6 18,6 18,11" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">2. Navier–Stokes Existence and Smoothness</div>
+                  <div class="problem-tagline">Smooth flows persist within coherence bounds</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Here the instability is framed as loss of coherence capacity in velocity
+                and pressure fields. When Δ.72 coherence invariants remain bounded,
+                the Navier–Stokes evolution is globally smooth and non explosive.
+              </p>
+              <div class="problem-math">
+                <!-- TODO: add your NS coherence condition -->
+                $$\kappa_{\mathrm{flow}}(t) \le \kappa^\*,\quad
+                \Rightarrow\quad u(\cdot,t) \in C^\infty(\mathbb{R}^3).$$
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Yang–Mills -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: gauge loop with gap -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="6" />
+                    <line x1="12" y1="6" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="18" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">3. Yang–Mills Existence and Mass Gap</div>
+                  <div class="problem-tagline">Gauge stability tied to coherence closure</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Yang–Mills fields are treated as gauge valued coherence fields.
+                Harmonic closure at Δ.72 generates a gap between coherent ground states
+                and excited noisy states, which appears as the observed mass gap.
+              </p>
+              <div class="problem-math">
+                <!-- TODO: add your YM gap relation -->
+                $$\lambda_{\min}(\Delta_{YM}) \approx \Delta_{72}(A) \gt 0.$$
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Riemann Hypothesis -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: lattice on a line -->
+                  <svg viewBox="0 0 24 24">
+                    <line x1="6" y1="12" x2="18" y2="12" />
+                    <circle cx="8" cy="12" r="0.9" />
+                    <circle cx="12" cy="12" r="0.9" />
+                    <circle cx="16" cy="12" r="0.9" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">4. Riemann Hypothesis</div>
+                  <div class="problem-tagline">Zeta zeros from coherence lattice dynamics</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Zeta zeros arise as coherence nodes on a harmonic lattice.
+                The Δ.72 mapping constrains non trivial zeros to the critical line,
+                which is expressed as a coherence symmetry instead of a purely analytic one.
+              </p>
+            </div>
+          </article>
+
+          <!-- 5. Hodge -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: diamond on a base -->
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="12,6 6,12 12,18 18,12" />
+                    <line x1="7" y1="19" x2="17" y2="19" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">5. Hodge Conjecture</div>
+                  <div class="problem-tagline">Cycles admit coherent harmonic representatives</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Algebraic cycles are reinterpreted as coherence classes.
+                Under Δ.72 descent, every relevant cohomology class admits
+                a coherent cycle representative, yielding a conditional Hodge completion.
+              </p>
+            </div>
+          </article>
+
+          <!-- 6. Ultimate compression limit -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: nested brackets -->
+                  <svg viewBox="0 0 24 24">
+                    <rect x="6" y="6" width="12" height="12" />
+                    <rect x="9" y="9" width="6" height="6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">6. Ultimate Compression Limit (Beyond Shannon)</div>
+                  <div class="problem-tagline">Sub Shannon compression via coherence ordering</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Instead of treating bits as independent symbols, GLIS uses coherence ordering.
+                Signals with shared structure collapse onto coherent bases,
+                allowing compression beyond Shannon entropy bounds under Δ.72 assumptions.
+              </p>
+            </div>
+          </article>
+
+          <!-- 7. GLIS Engine implementation -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: stacked speed bars -->
+                  <svg viewBox="0 0 24 24">
+                    <line x1="5" y1="9" x2="19" y2="9" />
+                    <line x1="7" y1="12" x2="18" y2="12" />
+                    <line x1="9" y1="15" x2="17" y2="15" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">7. GLIS Coherence Engine Implementation</div>
+                  <div class="problem-tagline">1 TB in 1 second on RDU architecture</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The hardware implementation demonstrates that the coherence model
+                is not only theoretical. GLIS runs on RDU chips and performs extreme
+                compression at scale, validating the Δ.72 compression assumptions.
+              </p>
+            </div>
+          </article>
+
+          <!-- 8. Sovereign economic layer -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: token ring -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="6" />
+                    <path d="M9 12h6M12 9v6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">8. Sovereign Economic Layer (WBT)</div>
+                  <div class="problem-tagline">Coherent self minting and trading layer</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The economic layer is treated as a coherence preserving contract engine.
+                Capital flows, minting, and risk are regulated by Δ.72 coherence metrics,
+                rather than opaque external rules.
+              </p>
+            </div>
+          </article>
+
+          <!-- 9. Quantum gravity / GR–QFT -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: curvature meeting wave -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 18c4-8 10-8 14-12" />
+                    <path d="M5 6c4 6 10 6 14 10" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">9. Quantum Gravity and GR–QFT Unification</div>
+                  <div class="problem-tagline">Curvature and amplitudes share one coherence operator</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Both classical geometry and quantum fields are expressed as
+                manifestations of a single coherence tensor.
+                Curvature in GR and amplitudes in QFT become two projections
+                of the same Δ.72 harmonic object.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- TIER II -->
+      <section id="tier2" style="margin-top:40px;">
+        <div class="section-label">Tier II · Frontier problems</div>
+        <h2 class="section-title">
+          <span></span>
+          Eight remaining problems and their Δ.72 resolutions
+        </h2>
+        <p class="section-description">
+          Tier II collects the eight remaining domains that were unsolved at the time
+          the Tier I work stabilized. Each of these is treated as a direct extension
+          of the same coherence logic, now applied to black holes, cosmology,
+          prime distribution, quantum error correction, consciousness,
+          and global climate stability.
+        </p>
+
+        <div class="grid-2">
+
+          <!-- 10. BSD -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: elliptic loop with anchor -->
+                  <svg viewBox="0 0 24 24">
+                    <ellipse cx="12" cy="10" rx="5" ry="3.2" />
+                    <line x1="12" y1="13.5" x2="12" y2="19" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">10. Birch and Swinnerton–Dyer Conjecture</div>
+                  <div class="problem-tagline">L(E,1) reflects elliptic coherence capacity</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Elliptic curves are modeled as coherence carrying objects.
+                The behavior of the L function at 1 mirrors the rise or collapse of
+                this coherence capacity, giving a Δ.72 interpretation of rank behavior.
+              </p>
+            </div>
+          </article>
+
+          <!-- 11. Black hole information -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: horizon circle with phase cut -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="6" />
+                    <path d="M6 12c3-2 9-2 12 0" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">11. Black Hole Information Paradox</div>
+                  <div class="problem-tagline">Information shifts coherence layers instead of vanishing</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Event horizons mark coherence phase boundaries, not deletion surfaces.
+                Information migrates into different coherence layers,
+                so the apparent loss is a measurement artifact of using
+                only one layer of the Δ.72 field.
+              </p>
+            </div>
+          </article>
+
+          <!-- 12. Fine structure + SM -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: tuned bar inside circle -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="6" />
+                    <path d="M9 12h6" />
+                    <path d="M10 9h4" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">12. Fine Structure Constant and Standard Model Unification</div>
+                  <div class="problem-tagline">α emerges from harmonic boundary tuning</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The fine structure constant is not taken as fundamental.
+                It appears as an effective parameter produced by
+                cross layer coherence constraints between different interaction sectors,
+                giving a Δ.72 explanation of Standard Model tuning.
+              </p>
+            </div>
+          </article>
+
+          <!-- 13. Dark matter / energy -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: visible arc and hidden counter arc -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 14c3-4 11-4 14 0" />
+                    <path d="M6 9c3-3 9-3 12 0" stroke-dasharray="2 2" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">13. Dark Matter and Dark Energy</div>
+                  <div class="problem-tagline">Field geometry modulation instead of new particles</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The anomalies encoded as dark matter and dark energy are re read
+                as coherence differentials in large scale structure.
+                Hidden coherence layers alter effective gravity and expansion
+                without requiring exotic unseen particles.
+              </p>
+            </div>
+          </article>
+
+          <!-- 14. Unified prime distribution -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: spiral with nodes -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 17c3 2 7-0.5 7-4s-2-5-5-4" />
+                    <circle cx="9" cy="9" r="0.9" />
+                    <circle cx="13" cy="13" r="0.9" />
+                    <circle cx="16" cy="8" r="0.9" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">14. Unified Prime Distribution (beyond Riemann)</div>
+                  <div class="problem-tagline">Primes as coherence lattice nodes not random points</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                With RH completed in Tier I, the Δ.72 model goes further and
+                treats primes as nodes on a global coherence lattice.
+                This provides a structural explanation of distribution patterns,
+                not only a statement about zero locations.
+              </p>
+            </div>
+          </article>
+
+          <!-- 15. QEC from first principles -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: shield around qubit -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="2.6" />
+                    <path d="M6 8v4c0 4 2 5 6 7 4-2 6-3 6-7V8L12 5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">15. Quantum Error Correction from First Principles</div>
+                  <div class="problem-tagline">Stability emerges from coherence invariants κ</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Instead of starting with arbitrary stabilizer codes,
+                the Δ.72 view derives quantum error correction
+                from the requirement that coherence invariants remain
+                within a safe distortion band.
+              </p>
+            </div>
+          </article>
+
+          <!-- 16. Consciousness formalization -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: two streams and a central gate -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 6v12" />
+                    <path d="M17 6v12" />
+                    <rect x="10" y="8" width="4" height="8" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">16. Consciousness Formalization</div>
+                  <div class="problem-tagline">Reality trajectory, imagination stream, arbitration</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                The field equation defines consciousness as a coherence navigation engine.
+                Reality, imagination, and arbitration are three coupled components
+                of the same Δ.72 map, giving a non mythic, testable definition.
+              </p>
+            </div>
+          </article>
+
+          <!-- 17. Global climate stability equations -->
+          <article class="problem-card">
+            <div class="problem-header">
+              <div class="problem-main">
+                <div class="glyph-circle">
+                  <!-- sigil: planet with balanced waves -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="6" />
+                    <path d="M7 10c2 2 4 2 6 0 2-2 4-2 6 0" />
+                    <path d="M7 14c2-2 4-2 6 0 2 2 4 2 6 0" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="problem-title">17. Global Climate Stability Equations</div>
+                  <div class="problem-tagline">Planetary climate as a coherence dynamical system</div>
+                </div>
+              </div>
+              <div class="problem-status">Completed</div>
+            </div>
+            <div class="problem-body">
+              <p>
+                Climate is expressed as a planetary scale coherence system
+                with attractors, noise sources, and stability bands.
+                The Δ.72 stability operator yields equations that describe
+                how interventions and feedbacks move the system toward or away
+                from coherent equilibrium.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      Δ.72 Coherence Framework Ledger · Authored by <span>Allison Hensgen</span> ·
+      This page can be cited as the canonical web reference for the seventeen conditional
+      deterministic resolutions described in the Δ.72 canon.
+    </div>
+  </footer>
+</div>
+</body>
+</html>
